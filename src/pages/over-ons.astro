@@ -1,0 +1,183 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Over ons - BMA Services">
+  <Header />
+
+  <HeroSection
+    title="Over Ons"
+    subtitle="Complete artist handling | Artiestenvervoer | Stagemanagement"
+    tagline="Artist Handling"
+    backgroundImage="/images/awakenings-event.jpg"
+  />
+
+  <!-- Our Story -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-primary font-semibold text-sm tracking-widest uppercase mb-3">Ons Verhaal</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+            Al meer dan 20 jaar actief in de evenementenbranche
+          </h2>
+          <div class="space-y-4 text-gray-500 leading-relaxed">
+            <p>
+              BMA Services is opgericht in 2001. De eerste opdrachtgevers waren Dancevalley en Club Risk. Jarenlang fungeerde BMA als chauffeur voor DJ's zoals Tom Harding, JP en Roog, met regelmatige weekendritten door heel Nederland.
+            </p>
+            <p>
+              In de loop der jaren heeft de organisatie zich steeds verder gespecialiseerd in grotere evenementen, festivals en internationale artist handling. Tegenwoordig ligt de focus op complete artisthandling voor festivals en feesten door het hele land.
+            </p>
+            <p>
+              Wij zorgen ervoor dat alle artiesten ruim op tijd aanwezig zijn en ook na hun optreden weer snel naar hun bestemming worden gebracht. Met een team van ervaren professionals garanderen wij een soepel verloop van elk evenement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Image + Timeline -->
+        <div class="relative">
+          <div class="mb-10 rounded-2xl overflow-hidden shadow-lg">
+            <img src="/images/bma2-1024x576.jpg" alt="BMA Services team aan het werk tijdens een groot evenement met lichtshow" class="w-full h-64 object-cover" />
+          </div>
+          <div class="absolute left-4 top-74 bottom-0 w-0.5 bg-primary/20"></div>
+          <div class="space-y-10">
+            <div class="relative pl-12">
+              <div class="absolute left-0 w-9 h-9 bg-primary rounded-full flex items-center justify-center">
+                <span class="text-white text-xs font-bold">01</span>
+              </div>
+              <h3 class="text-lg font-bold text-dark mb-1">2001 - Het Begin</h3>
+              <p class="text-gray-500 text-sm">Oprichting van BMA Services. Eerste opdrachtgevers: Dancevalley en Club Risk.</p>
+            </div>
+            <div class="relative pl-12">
+              <div class="absolute left-0 w-9 h-9 bg-primary rounded-full flex items-center justify-center">
+                <span class="text-white text-xs font-bold">02</span>
+              </div>
+              <h3 class="text-lg font-bold text-dark mb-1">Groei & Ontwikkeling</h3>
+              <p class="text-gray-500 text-sm">Uitbreiding naar grotere evenementen en festivals. Specialisatie in internationale artist handling.</p>
+            </div>
+            <div class="relative pl-12">
+              <div class="absolute left-0 w-9 h-9 bg-primary rounded-full flex items-center justify-center">
+                <span class="text-white text-xs font-bold">03</span>
+              </div>
+              <h3 class="text-lg font-bold text-dark mb-1">Vaste Partner</h3>
+              <p class="text-gray-500 text-sm">Vaste partner van Awakenings, ID&T, UDC en vele andere grote namen in de branche.</p>
+            </div>
+            <div class="relative pl-12">
+              <div class="absolute left-0 w-9 h-9 bg-primary rounded-full flex items-center justify-center">
+                <span class="text-white text-xs font-bold">04</span>
+              </div>
+              <h3 class="text-lg font-bold text-dark mb-1">Vandaag</h3>
+              <p class="text-gray-500 text-sm">Dé specialist in complete artist handling voor de grootste festivals en evenementen van Nederland.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience with clients -->
+  <section class="py-20 bg-gray-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-primary font-semibold text-sm tracking-widest uppercase mb-3">Onze Ervaring</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark">Langdurige Samenwerkingen</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Awakenings -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="/images/clients/awakenings.png" alt="Awakenings Festival logo" class="w-16 h-16 object-contain" />
+            <div>
+              <h3 class="text-xl font-bold text-dark">Awakenings</h3>
+              <p class="text-primary font-semibold text-sm">Meer dan 14 jaar samenwerking</p>
+            </div>
+          </div>
+          <p class="text-gray-500 leading-relaxed text-sm">
+            Complete artist handling inclusief drivers, runners, vervoercoördinatie, stagemanagers, artiesteningang terrein en Schiphol-balie. Een van onze langstlopende en meest uitgebreide samenwerkingen.
+          </p>
+        </div>
+
+        <!-- ID&T -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="/images/clients/idt.png" alt="ID&T logo" class="w-16 h-16 object-contain" />
+            <div>
+              <h3 class="text-xl font-bold text-dark">ID&T Nederland</h3>
+              <p class="text-primary font-semibold text-sm">Al bijna 11 jaar samenwerking</p>
+            </div>
+          </div>
+          <p class="text-gray-500 leading-relaxed text-sm">
+            Drivers, runners, vervoercoördinatie en Schiphol-balie voor diverse ID&T evenementen en festivals door heel Nederland.
+          </p>
+        </div>
+
+        <!-- UDC -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center">
+              <span class="text-primary font-bold text-lg">UDC</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-dark">UDC</h3>
+              <p class="text-primary font-semibold text-sm">15 jaar samenwerking</p>
+            </div>
+          </div>
+          <p class="text-gray-500 leading-relaxed text-sm">
+            Complete artist handling voor alle UDC evenementen. Een langdurig partnership gebouwd op vertrouwen en betrouwbare service.
+          </p>
+        </div>
+
+        <!-- AIR / The Good Guyz -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="/images/clients/openair.png" alt="Open Air logo" class="w-16 h-16 object-contain" />
+            <div>
+              <h3 class="text-xl font-bold text-dark">AIR / The Good Guyz</h3>
+              <p class="text-primary font-semibold text-sm">Meerdere evenementen</p>
+            </div>
+          </div>
+          <p class="text-gray-500 leading-relaxed text-sm">
+            Drivers en coördinatie voor evenementen waaronder Open Air, Milkshake, Buitenwesten, Loveland en Bungalup.
+          </p>
+        </div>
+
+        <!-- Mojo Dance -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="/images/clients/mojo.png" alt="Mojo Concerts logo" class="w-16 h-16 object-contain" />
+            <div>
+              <h3 class="text-xl font-bold text-dark">Mojo Dance</h3>
+              <p class="text-primary font-semibold text-sm">Regelmatige samenwerking</p>
+            </div>
+          </div>
+          <p class="text-gray-500 leading-relaxed text-sm">
+            Regelmatig vervoer voor evenementen in de Heineken Music Hall en andere Mojo Dance locaties.
+          </p>
+        </div>
+
+        <!-- Individual artists -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="/images/clients/daveclarck.png" alt="Dave Clarke logo" class="w-16 h-16 object-contain" />
+            <div>
+              <h3 class="text-xl font-bold text-dark">Individuele Artiesten</h3>
+              <p class="text-primary font-semibold text-sm">Persoonlijke service</p>
+            </div>
+          </div>
+          <p class="text-gray-500 leading-relaxed text-sm">
+            Persoonlijke artist handling voor individuele artiesten zoals Dave Clarke, Laidback Luke en Jeff Mills. FCA en X-Sense behoren ook tot onze opdrachtgevers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ClientLogos compact />
+
+  <Footer />
+</Layout>

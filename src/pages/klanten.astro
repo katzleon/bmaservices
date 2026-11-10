@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Footer from '../components/Footer.astro';
+
+const clients = [
+  { name: 'Mojo Concerts', file: 'mojo' },
+  { name: 'Drumcode', file: 'drumcode' },
+  { name: 'Open Air', file: 'openair' },
+  { name: 'Milkshake Festival', file: 'milkshake' },
+  { name: 'Gemeente Lansingerland', file: 'Lansingerland' },
+  { name: 'Lentekabinet Festival', file: 'lentekabinet' },
+  { name: 'Dekmantel Festival', file: 'dekmantel' },
+  { name: 'Latin Village Festival', file: 'latinvillage' },
+  { name: 'Mystic Garden Festival', file: 'mysticgarden' },
+  { name: 'Dockyard Festival', file: 'dockyard' },
+  { name: 'Mysteryland Festival', file: 'mysteryland' },
+  { name: 'ID&T', file: 'idt' },
+  { name: 'HRFST Festival', file: 'hrfst' },
+  { name: 'Loveland Festival', file: 'loveland' },
+  { name: 'Lief Festival', file: 'lief' },
+  { name: 'Geheime Liefde', file: 'geheimeliefde' },
+  { name: 'Marktkantine', file: 'marktkantine' },
+  { name: 'Welcome to the Future', file: 'wttf' },
+  { name: 'Connect Festival', file: 'connect' },
+  { name: 'Amsterdam Dance Event', file: 'ade' },
+  { name: 'Meet Me Festival', file: 'meetme' },
+  { name: 'Overwinteren Festival', file: 'overwinteren' },
+  { name: 'Dave Clarke', file: 'daveclarck' },
+  { name: 'Toffler', file: 'toffler' },
+  { name: 'Awakenings Festival', file: 'awakenings' },
+  { name: 'Soenda Festival', file: 'soenda' },
+  { name: 'X-Sense Festival', file: 'xsense' },
+  { name: 'Dutch Valley Festival', file: 'dutchvalley' },
+  { name: 'Free Your Mind Festival', file: 'freeyourmind' },
+  { name: 'Dance Valley Festival', file: 'dancevalley' },
+];
+---
+
+<Layout title="Klanten - BMA Services">
+  <Header />
+
+  <HeroSection
+    title="Onze Klanten"
+    subtitle="Complete artist handling | Artiestenvervoer | Stagemanagement"
+    tagline="Artist Handling"
+    backgroundImage="/images/mysteryland-stage.jpg"
+  />
+
+  <!-- Clients Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+          Vertrouwd door de beste namen
+        </h2>
+        <p class="text-lg text-gray-500 leading-relaxed">
+          Al meer dan 20 jaar werken wij samen met de grootste festivals, evenementen en artiesten van Nederland. Hier zijn enkele van onze vaste opdrachtgevers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
+        {clients.map((client) => (
+          <div class="group relative bg-gray-light rounded-2xl p-6 flex items-center justify-center aspect-square hover:shadow-lg hover:bg-white hover:border-primary/20 border border-transparent transition-all duration-300 hover:-translate-y-1">
+            <img
+              src={`/images/clients/${client.file}.png`}
+              alt={`Logo van ${client.name} - klant van BMA Services`}
+              class="w-full h-auto max-h-24 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+              loading="lazy"
+              width="300"
+              height="300"
+            />
+            <div class="absolute inset-x-0 bottom-0 bg-dark/90 text-white text-xs font-medium text-center py-2 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {client.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Wilt u ook samenwerken?
+      </h2>
+      <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+        Sluit u aan bij onze groeiende lijst van tevreden klanten. Neem contact met ons op om de mogelijkheden te bespreken.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
+      >
+        Neem contact op
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,65 @@
+---
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+
+const clients = [
+  { name: 'Mojo Concerts', file: 'mojo' },
+  { name: 'Drumcode', file: 'drumcode' },
+  { name: 'Open Air', file: 'openair' },
+  { name: 'Milkshake Festival', file: 'milkshake' },
+  { name: 'Gemeente Lansingerland', file: 'Lansingerland' },
+  { name: 'Lentekabinet Festival', file: 'lentekabinet' },
+  { name: 'Dekmantel Festival', file: 'dekmantel' },
+  { name: 'Latin Village Festival', file: 'latinvillage' },
+  { name: 'Mystic Garden Festival', file: 'mysticgarden' },
+  { name: 'Dockyard Festival', file: 'dockyard' },
+  { name: 'Mysteryland Festival', file: 'mysteryland' },
+  { name: 'ID&T', file: 'idt' },
+  { name: 'HRFST Festival', file: 'hrfst' },
+  { name: 'Loveland Festival', file: 'loveland' },
+  { name: 'Lief Festival', file: 'lief' },
+  { name: 'Geheime Liefde', file: 'geheimeliefde' },
+  { name: 'Marktkantine', file: 'marktkantine' },
+  { name: 'Welcome to the Future', file: 'wttf' },
+  { name: 'Connect Festival', file: 'connect' },
+  { name: 'Amsterdam Dance Event', file: 'ade' },
+  { name: 'Meet Me Festival', file: 'meetme' },
+  { name: 'Overwinteren Festival', file: 'overwinteren' },
+  { name: 'Dave Clarke', file: 'daveclarck' },
+  { name: 'Toffler', file: 'toffler' },
+  { name: 'Awakenings Festival', file: 'awakenings' },
+  { name: 'Soenda Festival', file: 'soenda' },
+  { name: 'X-Sense Festival', file: 'xsense' },
+  { name: 'Dutch Valley Festival', file: 'dutchvalley' },
+  { name: 'Free Your Mind Festival', file: 'freeyourmind' },
+  { name: 'Dance Valley Festival', file: 'dancevalley' },
+];
+---
+
+<section class={compact ? 'py-16 bg-gray-light' : 'py-20 bg-gray-light'}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {!compact && (
+      <div class="text-center mb-14">
+        <p class="text-primary font-semibold text-sm tracking-widest uppercase mb-3">Vertrouwd door</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark">Onze Klanten</h2>
+      </div>
+    )}
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 md:gap-8">
+      {clients.map((client) => (
+        <div class="group flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+          <img
+            src={`/images/clients/${client.file}.png`}
+            alt={`Logo van ${client.name} - klant van BMA Services`}
+            class="w-full h-auto max-h-20 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+            loading="lazy"
+            width="300"
+            height="300"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
